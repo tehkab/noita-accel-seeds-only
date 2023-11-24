@@ -2,11 +2,12 @@ dofile_once("data/scripts/lib/coroutines.lua")
 dofile_once( "data/scripts/lib/utilities.lua")
 dofile_once("data/scripts/items/potion_starting.lua")
 
-function OnModPostInit()
+function OnMagicNumbersAndWorldSeedInitialized()
     --this doesnt actually run async(?), not sure why
     --but it generates the output okay nevertheless
     --at the cost of appearing to hang (with nolla's fun error screen) while loading :)
-    async(test_all_seeds())
+    --async(test_all_seeds())
+    test_all_seeds()
 end
 
 function test_all_seeds()
@@ -19,13 +20,6 @@ function test_all_seeds()
         SetRandomSeed(-4.5,-4)
         if potion_a_materials() == "magic_liquid_movement_faster" then
             f:write(new_seed .. "\n")
-        end
-
-        if GameGetFrameNum() ~= frame then
-            frame = GameGetFrameNum()
-            if 0 == (frame % 30) then
-                GamePrint("tested seed " .. new_seed)
-            end
         end
     end
     f:close()
