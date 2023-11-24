@@ -1,7 +1,7 @@
 <Mod
 	name="Acceleratium Seeds Only"
 	description="Forces the seed to a acceleratium start, from *real* acceleratium seeds only"
-	request_no_api_restrictions="0"
+	request_no_api_restrictions="1"
 >
 </Mod>
 
