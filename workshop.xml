@@ -1,0 +1,8 @@
+<Mod
+    name="Acceleratium Starts Only"
+    description=""
+    tags="quality of life"
+    dont_upload_folders=".vscode|.git"
+    dont_upload_files=".gitignore|LICENSE|README.md"
+    >
+</Mod>
